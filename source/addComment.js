@@ -9,11 +9,17 @@ var toggleForm = function() {
 
 var submitComment = function() {
   event.preventDefault();
+
   var $li = $('<li />');
   var $span = $('<span />').addClass('author');
+
   var $comment = $(this).find('textarea[name=comment]');
   var $author = $(this).find('input[name=authorName]');
 
+  if ($comment.val() == ""){
+    return;
+  };
+  
   $li.text($comment.val());
   $span.text($author.val());
 
