@@ -1,21 +1,24 @@
 $(document).ready(function(){
-  $('#new_comment_button').on('click', function() {
-    $('form').toggle()
-  })
+  $('#new_comment_button').on('click', toggleForm);
+  $('#new_comment').submit(submitComment)
+});
 
-  $('form[name=new_comment]').on('submit', function() {
-    event.preventDefault();
-    var $li = $('<li />');
-    var $span = $('<span />').addClass('author');
-    var $comment = $(this).find('textarea[name=comment]');
-    var $author = $(this).find('input[name=authorName]');
+var toggleForm = function() {
+  $('form').toggle();
+};
 
-    $li.text($comment.val());
-    $span.text($author.val());
+var submitComment = function() {
+  event.preventDefault();
+  var $li = $('<li />');
+  var $span = $('<span />').addClass('author');
+  var $comment = $(this).find('textarea[name=comment]');
+  var $author = $(this).find('input[name=authorName]');
 
-    $li.append($span);
+  $li.text($comment.val());
+  $span.text($author.val());
 
-    var $list = $('#comment_list');
-      $list.append($li);
-  })
-})
+  $li.append($span);
+
+  var $list = $('#comment_list');
+    $list.append($li);
+};
