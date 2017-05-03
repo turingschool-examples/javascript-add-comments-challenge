@@ -1,11 +1,12 @@
-function doSomething(){
+function addComment(){
   event.preventDefault();
 
-  var formInput = $('input[name=comment]').val()
+  var formComment = $('input[name=comment]').val()
+  var formAuthor = $('input[name=author]').val()
 
-  $('#comment_list').append("<li>"+ formInput +"</li>")
+  $('#comment_list').append("<li>"+ formComment + "<span class = 'author'>" + formAuthor +" </span></li>")
 }
 
 $(document).ready(function(){
-  $("#add-comment").submit(doSomething)
+  $("#add-comment").submit(addComment)
 })
