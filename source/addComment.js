@@ -3,7 +3,7 @@ $(document).ready(function(){
     $('form').toggle()
   })
 
-  $('form[name=new_comment]').on('submit', function(event) {
+  $('form[name=new_comment]').on('submit', function() {
     event.preventDefault();
     var $li = $('<li />');
     var $span = $('<span />').addClass('author');
