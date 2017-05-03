@@ -13,15 +13,15 @@ var submitComment = function() {
   var $li = $('<li />');
   var $span = $('<span />').addClass('author');
 
-  var $comment = $(this).find('textarea[name=comment]');
-  var $author = $(this).find('input[name=authorName]');
+  var $comment = $('textarea[name=comment]').val();
+  var $author = $('input[name=authorName]').val();
 
-  if ($comment.val() == ""){
+  if ($comment == ""){
     return;
   };
-  
-  $li.text($comment.val());
-  $span.text($author.val());
+
+  $li.text($comment);
+  $span.text($author);
 
   $li.append($span);
 
