@@ -1,14 +1,22 @@
 $(document).ready(function(){
-  $( "#new_comment_button" ).on("click", function() {
+  $('#new_comment_button').on('click', function() {
     event.preventDefault();
-    $( "#new_comment_button").hide();
-    // When the user clicks on the New Comment button, the new comment form with textarea (cannot be emtpy) and author (can be empty and displays nothing with textarea content after create) should appear.
-
-  });
-
-  // When the user enters text into the two fields and presses the Create Comment button, a new comment should be created and added to the end of the comment list.
-
-  // re-show the new comment button
-  // append the new comment to #comment_list
-
-});
+    $('#new_comment_button').hide();
+    console.log('this is working so far');
+    $('#new_comment').show();
+      $('#comments').append('<div id="new_comment"><textarea name="newComment" placeholder="enter your comment"/><br><input type="text" name="authorName" placeholder="your name"/><input type="submit" value="create comment"</div>');
+        $('#comments input[type="submit"]').click(function() {
+          event.preventDefault();
+          var newComment = $(this).parent().find('textarea').val();
+          var authorName = $(this).parent().find('input[name="authorName"]').val();
+          if (newComment) {
+            $('#comment_list').append('<li>' + newComment + '<span class="author">' + authorName + '</span></li>');
+            $('#new_comment').remove();
+            $('#new_comment_button').show();
+          }
+          else{
+            alert("Please enter a comment");
+          }
+        });
+      });
+    });
