@@ -40,7 +40,7 @@ form#new_comment {
   padding: 6px;
   border: 1px solid #666;
   border-radius: 3px;
-  display: none;
+  display: ;
 }
 
 form#new_comment textarea {
