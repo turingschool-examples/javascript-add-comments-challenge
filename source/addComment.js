@@ -2,7 +2,13 @@ $(document).ready(function(){
   $('#new_comment_button').click(function(e){
     e.preventDefault();
     $('body').append('<form id=new_comment style="display: inline;"></form>')
-    $('#new_comment').append("<input").append("<textarea type='textarea' placeholder='Your Comment'")
+    $('#new_comment').append("<input").append("<textarea type='textarea' placeholder='Comment Body'" )
+
+
+    // + $('input[name="submit"]') + "</li>"
+
+
+
     // var f = document.createElement("form");
     // f.setAttribute('id',"banana");
     // f.setAttribute('method',"post");
