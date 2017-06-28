@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
   function addCommentBox() {
-    $('#comments').append('<form id="new_comment"></form>')
+    $('#comments').append('<form id="new_comment" style="display: block"></form>')
     $('#new_comment').append('<textarea placeholder="Your comment here..."></textarea>')
     $('#new_comment').append('<input id="authorName" placeholder="author" />')
     $('#new_comment').append('<input type="submit" value="Submit Comment" />')
