@@ -36,23 +36,23 @@ ul#comment_list .author {
 
 form#new_comment {
   width: 360px;
-  background-color: #777;
+  background-color: #888888;
   padding: 6px;
   border: 1px solid #666;
   border-radius: 3px;
-  display: none;
+  display: block;
 }
 
 form#new_comment textarea {
   width: 100%;
+  min-height: 100px;
 }
 
 form#new_comment input#authorName {
-  min-width: 50%;
-  max-width: 68%;
+  width: 100%;
 }
 
 form#new_comment input[type="submit"] {
-  min-width: 30%;
+  width: 50px;
   float: right;
 }
