@@ -8,16 +8,22 @@ $(document).ready(function(){
     </form>`
   };
 
-  function newComment(text, author){
+  function buildComment(text, author){
     return `<li>
       ${text}
       <span class="author">${author}</span>
     </li>`
   };
 
-  $('#new_comment_button').on('click', function(){
-    $('#comment_list').append(commentForm());
+  function listenForNewComment(){
+    $('#new_comment_button').on('click', function(){
+      $('#comment_list').append(commentForm());
 
+      writeComment();
+    });
+  };
+
+  function writeComment(){
     $('#new_comment').on('submit', function(){
       event.preventDefault();
 
@@ -32,8 +38,10 @@ $(document).ready(function(){
         $('#text').val('You must enter a comment!');
       } else {
         $('#new_comment').remove();
-        $('#comment_list').append(newComment(text, authorName));
+        $('#comment_list').append(buildComment(text, authorName));
       };
     });
-  });
+  };
+
+  listenForNewComment();
 });
