@@ -1,3 +1,14 @@
 $(document).ready(function(){
-  // add your code here
+  $('#new_comment_button').on('click', () => {
+    // prevent the default action of submitting the form,
+    // which would otherwise be to send an HTTP request to submit the form
+    event.preventDefault()
+
+    $('#comments').append(`
+      <form>
+        <input name="comment"></input>
+        <button id="submit-comment-button">Submit</button>
+      </form>
+    `)
+  })
 })
