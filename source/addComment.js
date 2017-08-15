@@ -6,11 +6,12 @@ $(document).ready(function() {
     const newCommentText = $('#new_comment_text')
     const authorName = $('#authorName')
 
-    const cleanUp = function() {
+    const cleanUp = () => {
         newCommentText.val('')
         authorName.val('')
         commentForm.hide();
     }
+
     commentButton.click(function() {
         commentForm.show()
     })
