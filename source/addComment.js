@@ -16,18 +16,24 @@ $(document).ready(function(){
   };
 
   $('#new_comment_button').on('click', function(){
-    let authorName;
-    let text;
-    let form = $('#comment_list').append(commentForm());
+    $('#comment_list').append(commentForm());
 
     $('#new_comment').on('submit', function(){
       event.preventDefault();
 
-      authorName = $('#authorName').val();
-      text = $('#text').val();
+      let authorName = $('#authorName').val();
+      let text = $('#text').val();
 
-      $('#new_comment').remove()
-      $('#comment_list').append(newComment(text, authorName));
+      if(authorName == ''){
+        authorName = 'Anonymous';
+      }
+
+      if(text == ''){
+        $('#text').val('You must enter a comment!');
+      } else {
+        $('#new_comment').remove();
+        $('#comment_list').append(newComment(text, authorName));
+      };
     });
   });
-})
+});
