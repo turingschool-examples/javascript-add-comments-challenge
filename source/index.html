@@ -1,28 +1,36 @@
 <!doctype html>
 <html>
+
 <head>
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="addComment.js"></script>
-  <title>Add Comments</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="addComment.js"></script>
+    <title>Add Comments</title>
 </head>
+
 <body>
-  <article>
-    <h2>My First Post</h2>
-    <p>Taxidermy pour-over synth, XOXO swag hashtag la croix kale chips bushwick health goth. Flexitarian 3 wolf moon four loko, occupy enamel pin pug photo booth meggings vape tilde forage shoreditch irony air plant. Enamel pin tofu try-hard kinfolk everyday carry pok pok, brunch brooklyn vinyl mlkshk flannel paleo occupy poutine. Four dollar toast selvage austin bicycle rights asymmetrical vice.</p>
-  </article>
+    <article>
+        <h2>My First Post</h2>
+        <p>Taxidermy pour-over synth, XOXO swag hashtag la croix kale chips bushwick health goth. Flexitarian 3 wolf moon four loko, occupy enamel pin pug photo booth meggings vape tilde forage shoreditch irony air plant. Enamel pin tofu try-hard kinfolk
+            everyday carry pok pok, brunch brooklyn vinyl mlkshk flannel paleo occupy poutine. Four dollar toast selvage austin bicycle rights asymmetrical vice.</p>
+    </article>
 
-  <div id="comments">
-    <h4>Comments</h4>
+    <div id="comments">
+        <h4>Comments</h4>
 
-    <ul id="comment_list">
-      <li>
-        Your post is great! Really enjoyed reading it :)
-        <span class="author">Penelope Piper</span>
-      </li>
-    </ul>
-
-    <button id="new_comment_button">New Comment</button>
-  </div>
+        <ul id="comment_list">
+            <li>
+                Your post is great! Really enjoyed reading it :)
+                <span class="author">Penelope Piper</span>
+            </li>
+        </ul>
+        <button id="new_comment_button">New Comment</button>
+    </div>
+    <form id="new_comment">
+        <textarea id="new_comment_text" placeholder="comment"></textarea>
+        <input id="authorName" placeholder="author">
+        <input type='submit'>
+    </form>
 </body>
+
 </html>
