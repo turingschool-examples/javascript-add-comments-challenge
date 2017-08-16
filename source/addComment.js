@@ -6,8 +6,9 @@ $(document).ready(function(){
 
     $('#comments').append(`
       <form>
-        <input name="comment"></input>
-        <button id="submit-comment-button">Submit</button>
+        <input name="comment" placeholder="Your comment here..."></input>
+        <input name="author" placeholder="author"></input>
+        <button id="submit-comment-button">Submit Comment</button>
       </form>
     `)
   })
