@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     $('#comments').append(`
       <form id="new_comment">
-        <input name="comment" placeholder="Your comment here..."></input>
+        <textarea name="comment" type="textarea" placeholder="Your comment here..."></textarea>
         <input name="author" placeholder="author"></input>
         <button id="submit-comment-button">Submit Comment</button>
       </form>
