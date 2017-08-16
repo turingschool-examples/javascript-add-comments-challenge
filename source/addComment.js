@@ -12,4 +12,23 @@ $(document).ready(function(){
       </form>
     `)
   })
+
+  $('#comments').on('click', '#submit-comment-button', () => {
+    event.preventDefault();
+    const comment = $('textarea[name=comment]').val();
+    const author = $('input[name=author]').val();
+
+
+    comment_template = `
+      <ul id="comment_list">
+        <li>
+          ${comment}
+          <span class="author">${author}</span>
+        </li>
+      </ul>
+    `
+
+    $('#comment_list').append(comment_template)
+
+  })
 })
