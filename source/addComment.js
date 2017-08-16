@@ -5,7 +5,7 @@ $(document).ready(function(){
     event.preventDefault()
 
     $('#comments').append(`
-      <form>
+      <form id="new_comment">
         <input name="comment" placeholder="Your comment here..."></input>
         <input name="author" placeholder="author"></input>
         <button id="submit-comment-button">Submit Comment</button>
