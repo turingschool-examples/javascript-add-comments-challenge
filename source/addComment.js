@@ -1,3 +1,5 @@
+var $newCommentButton = $("#new_comment_button");
+
 const commentForm = `
   <form id="comment_form" name="comment_form">
   <textarea name="comment_field" placeholder="type a comment"></textarea><br/>
@@ -7,10 +9,9 @@ const commentForm = `
 `
 
 const showForm = function() {
-  $("#new_comment_button").before(commentForm)
-  $("#new_comment_button").hide()
+  $("#comments").append(commentForm)
+  $newCommentButton.hide()
   event.preventDefault();
-  $("#comment_form").on("submit", submitComment)
 }
 
 const submitComment = function(event) {
@@ -19,10 +20,11 @@ const submitComment = function(event) {
 
   $("#comment_list").append("<li>" + comment + "<span class='author'>" + author + "</span></li>")
   $("#comment_form").remove()
-  $("#new_comment_button").show();
+  $newCommentButton.show();
   event.preventDefault();
 }
 
 $(document).ready(function(){
   $("#new_comment_button").on("click", showForm)
+  $('#comments').on('submit', '#comment_form', submitComment)
 })
