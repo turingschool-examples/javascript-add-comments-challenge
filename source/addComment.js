@@ -14,6 +14,12 @@ $(document).ready(function(){
         event.preventDefault();
         var comment = $('#comment-text').val();
         var author = $('#authorName').val();
-      })
+
+        $('#new_comment').remove()
+        if (comment) {
+          $('#comment_list').append('<li>' + comment + '<span class="author">' + author + '</span>' + '</li>');
+        }
+        $('#new_comment_button').show();
+      });
   });
 });
