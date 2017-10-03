@@ -1,8 +1,9 @@
 $(document).ready(function(){
     $("#comment_form").hide();
-  $(#comments).on("submit", function() {
+    $("#text_box").hide();
+  $("#comments").on("submit", function() {
     $("#comment_form").show();
-    jQuery(html [, ownerDocument]);
-    let comment = e.data.val();
+    //jQuery(html [, ownerDocument]);
+    //let comment = e.data.val();
   });
 });
