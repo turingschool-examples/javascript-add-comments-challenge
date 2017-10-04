@@ -8,10 +8,8 @@ $(document).ready(function(){
 
     $("#comment_form").on('submit', function(e) {
       e.preventDefault();
-      console.log('it works!');
       let $data = $("#comment_form :input");
-      console.log($data);
-      $("#comment_list").append(`${$data}`);
-      debugger;
+      $("#comment_list").append(`<li>${$data}</li>`);
+      $("#comment_list").append(`<li><em>${$data}</em></li>`);
     });
 });
