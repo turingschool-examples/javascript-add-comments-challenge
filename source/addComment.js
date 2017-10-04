@@ -10,7 +10,6 @@ $(document).ready(function(){
       e.preventDefault();
       let $comment = $('#comment').val();
       let $name = $('#user_name').val();
-      $("#comment_list").append(`<li>${$comment}</li>\n<em>${$name}</em></li>`);
-      //debugger;
+      $("#comment_list").append(`<li>${$comment}\n<em><font size="-1">${$name}</font></em></li>`);
     });
 });
