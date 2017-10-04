@@ -13,10 +13,14 @@ $(document).ready(function(){
     $(comment).on('submit', function(e){
       e.preventDefault();
       attributes = ( $("#new_comment_form").serializeArray() );
-      name = attributes[0]["value"];
-      comment = attributes[1]["value"];
+      let name = attributes[0]["value"];
+      let comment = attributes[1]["value"];
 
-      $list.append('<li>' + `${comment}` + '<span class="author">' + `${name}` + '</span>')
+      if (comment == "") {
+        event.preventDefault();
+      } else {
+        $list.append('<li>' + `${comment}` + '<span class="author">' + `${name}` + '</span>')
+      }
     });
   });
 })
