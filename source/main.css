@@ -7,6 +7,11 @@
   margin-top: 0;
 }
 
+#new-comment {
+  background-color: lightgrey;
+  width: 400px;
+}
+
 #new_comment_button {
   margin-top: 10px;
 }
