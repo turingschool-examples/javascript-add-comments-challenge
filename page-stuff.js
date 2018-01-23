@@ -1,7 +1,6 @@
 $(document).ready(function(){
   $('#new_comment_button').on('click', function() {
-    $('form#new_comment').show();
-    $('#new_comment_button').hide();
+    hideShowButtonForm();
   });
 
   $('form#new_comment input[type="submit"]').on('click', function(event) {
@@ -19,11 +18,17 @@ function createNewComment(commentBody,commentAuthor) {
     $('form#new_comment textarea').val("Your comment here...");
     $('form#new_comment input[type="text"]').val("");
 
-    $('form#new_comment').hide();
-    $('#new_comment_button').show();
+    hideShowButtonForm();
   }
 };
 
-// function hideShowButtonForm() {
-//   if (form#new_comment)
-// }
+function hideShowButtonForm() {
+  if ($('form#new_comment').css('display') == 'none') {
+    $('form#new_comment').show();
+    $('#new_comment_button').hide();
+  }
+  else {
+    $('form#new_comment').hide();
+    $('#new_comment_button').show();
+  }
+}
