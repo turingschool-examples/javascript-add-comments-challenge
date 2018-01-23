@@ -3,8 +3,40 @@
   <head>
     <meta charset="utf-8">
     <title>This is the page that never ends</title>
+    <link rel="stylesheet" type="text/css" href="stuff.css">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="page-stuff.js"></script>
   </head>
   <body>
+    <article>
+      <h1>My First Post</h1>
 
+      <p>In those final weeks, I knew better than to walk near my mother.  Most of the time, she just looked at me with the stink-eye, but sometimes, without warning, she would grab me by my throat and hang on, until I pried her fingers from me.  She didn't bother talking to me unless it was to make death threats.
+        "When you grow up, you'll meet me in a dark alley when you least expect it, and then I'll do away with you, and nobody will ever know."
+      Literally, gloating as she said this...
+      </p>
+    </article>
+
+    <div id="comments">
+      <h3>Comments</h3>
+
+      <ul id="comment_list">
+        <li>
+          When I pass a flowering zucchini plant in a garden, my heart skips a beat.
+          <span class="author">Gwyneth Paltrow</span>
+        </li>
+      </ul>
+
+      <button id="new_comment_button">New Comment</button>
+
+      <form id="new_comment">
+        <textarea name="comment" form="new_comment">Your comment here...</textarea>
+        <input id="authorName" type="text" placeholder="author">
+        <input type="submit" value="Submit Comment">
+      </form>
+    </div>
   </body>
 </html>
