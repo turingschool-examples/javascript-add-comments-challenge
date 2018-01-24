@@ -13,7 +13,6 @@ $(document).ready(function(){
 function renderCommentForm() {
   var commentForm = document.getElementById('new_comment')
   $(commentForm).css('display', 'block')
-  console.log(commentForm)
   clearInputs()
 }
 
