@@ -8,8 +8,10 @@ $(document).ready(function(){
     event.preventDefault();
     var commentBody = document.getElementsByName('comment')[0].value
     var authorName = document.getElementsByName('authorName')[0].value
-    $('#comment_list').append(`<li>${commentBody}<span class="author">${authorName}</span></li>`)
-    renderForm();   
+    if (authorName !== "") {
+      $('#comment_list').append(`<li>${commentBody}<span class="author">${authorName}</span></li>`)
+      renderForm();   
+    }
   })
 })
 
