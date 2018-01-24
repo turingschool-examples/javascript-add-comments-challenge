@@ -4,7 +4,6 @@ $(document).ready(function(){
   })
   var newCommentButton = document.getElementById('new_comment_button')
   var submitButton = document.getElementsByTagName('input')[1]
-  var commentForm = document.getElementById('new_comment')
 
   newCommentButton.addEventListener('click', renderCommentForm)
   submitButton.addEventListener('click', postComment)
