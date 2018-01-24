@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  // add your code here
   $("#new_comment_button").on("click", function(event){
     $("#new_comment_button").remove()
     $("body").append(
@@ -15,7 +14,6 @@ $(document).ready(function(){
   })
 
   $(document).on("click", "input[name='comment-submit']", function(event){
-    //grab the values of the fields 
     event.preventDefault()
     var body = $("input[name='comment-body']").val()
     var author = $("input[name='author']").val()
