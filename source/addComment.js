@@ -1,11 +1,15 @@
 $(document).ready(function(){
-  // on click of New Comment replace button with form
-  $("#new_comment_button").on("click", function(event) {
-    event.preventDefault()
+  $("#comments").on("click", "#new_comment_button", function(event) {
     replaceButton()
   })
-  // on click of Submit Comment (on form), replace form with
-  // form content and new button
+
+  $(event).ready( function() {
+    $("#comments").on("click", "[type=submit]", function(event) {
+      event.preventDefault()
+      showComment()
+      createNewButton()
+    })
+  })
 })
 
 function replaceButton() {
@@ -13,10 +17,29 @@ function replaceButton() {
 
   $("#comments").append(
     "<form id=new_comment>" +
-      "<p><input type='textarea'></p>" +
-      "<input type='text' value='author' id='authorName'>" +
+      "<textarea placeholder='Your comment here...'></textarea>" +
+      "<input type='text' placeholder='author' id='authorName'>" +
       "<input type='submit' value='Submit Comment'>" +
     "</form>"
   )
   $("#new_comment").show()
+}
+
+function showComment() {
+  $("#comment_list").append(
+    "<li>" +
+      $("#new_comment textarea").val() +
+      "<span class='author'>" +
+        $("#new_comment #authorName").val() +
+      "</span>" +
+    "</li>"
+  )
+};
+
+function createNewButton() {
+  $("#new_comment").remove()
+
+  $("#comments").append(
+    "<button id='new_comment_button'>New Comment</button>"
+  )
 }
