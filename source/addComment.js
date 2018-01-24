@@ -28,15 +28,16 @@ function hideCommentForm() {
 function postComment() {
   var authorName = $('input[id=authorName]').val()
   var comment = $('form[id=new_comment] textarea').val()
-  var listNode = document.createElement("LI")
-  var list = document.getElementById('comment_list')
-
-  renderComment(listNode, comment)
-  if (authorName !== "") {renderAuthor(listNode, authorName)}
-
-  list.appendChild(listNode)
-
-  hideCommentForm()
+  if (comment != '') {
+    var listNode = document.createElement("LI")
+    var list = document.getElementById('comment_list')
+    renderComment(listNode, comment)
+    if (authorName !== "") {
+      renderAuthor(listNode, authorName
+    )}
+    list.appendChild(listNode)
+    hideCommentForm()
+  }
 }
 
 function renderComment(listNode, comment) {
