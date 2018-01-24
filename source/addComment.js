@@ -32,7 +32,7 @@ function postComment() {
     var listNode = document.createElement("LI")
     var list = document.getElementById('comment_list')
     renderComment(listNode, comment)
-    if (authorName !== "") {
+    if (authorName != '') {
       renderAuthor(listNode, authorName
     )}
     list.appendChild(listNode)
@@ -48,7 +48,7 @@ function renderComment(listNode, comment) {
 function renderAuthor(listNode, authorName) {
   var authorNode = document.createElement('SPAN')
   var authorNameNode = document.createTextNode(authorName)
-  authorNode.classList.add("author")
+  authorNode.classList.add('author')
   authorNode.appendChild(authorNameNode)
   listNode.appendChild(authorNode)
 }
