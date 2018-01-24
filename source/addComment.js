@@ -1,31 +1,40 @@
 $(document).ready(function(){
-  $("#comments").on("click", "#new_comment_button", function(event) {
-    replaceButton()
-  })
+  $("#comments").on("click", "#new_comment_button", showCommentForm)
 
-  $(event).ready( function() {
-    $("#comments").on("click", "[type=submit]", function(event) {
-      event.preventDefault()
-      showComment()
-      createNewButton()
-    })
-  })
+  $("#comments").on("click", "[type=submit]", submitNewComment)
 })
 
-function replaceButton() {
-  $("#new_comment_button").remove()
+function showCommentForm() {
+  removeNewCommentButton()
+  createCommentForm()
+  unhideCommentForm()
+}
 
+function removeNewCommentButton() {
+  $("#new_comment_button").remove()
+}
+
+function createCommentForm() {
   $("#comments").append(
     "<form id=new_comment>" +
-      "<textarea placeholder='Your comment here...'></textarea>" +
-      "<input type='text' placeholder='author' id='authorName'>" +
-      "<input type='submit' value='Submit Comment'>" +
+    "<textarea placeholder='Your comment here...'></textarea>" +
+    "<input type='text' placeholder='author' id='authorName'>" +
+    "<input type='submit' value='Submit Comment'>" +
     "</form>"
   )
+}
+
+function unhideCommentForm() {
   $("#new_comment").show()
 }
 
-function showComment() {
+function submitNewComment() {
+  renderNewComment()
+  removeCommentForm()
+  createNewButton()
+}
+
+function renderNewComment() {
   $("#comment_list").append(
     "<li>" +
       $("#new_comment textarea").val() +
@@ -36,10 +45,10 @@ function showComment() {
   )
 };
 
-function createNewButton() {
+function removeCommentForm() {
   $("#new_comment").remove()
+}
 
-  $("#comments").append(
-    "<button id='new_comment_button'>New Comment</button>"
-  )
+function createNewButton() {
+  $("#comments").append("<button id='new_comment_button'>New Comment</button>")
 }
