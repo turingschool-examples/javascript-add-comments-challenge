@@ -14,15 +14,19 @@
 
   <div id="comments">
     <h4>Comments</h4>
-
-    <ul id="comment_list">
+    <ul id="comment-list">
       <li>
         Your post is great! Really enjoyed reading it :)
         <span class="author">Penelope Piper</span>
       </li>
     </ul>
-
-    <button id="new_comment_button">New Comment</button>
   </div>
+
+  <button id="new-comment-button">New Comment</button>
+  <form id="new-comment" action="index.html" method="post">
+    <textarea id="comment-text" name="name" placeholder="Enter comment..."></textarea><br>
+    <input id="author-name" type="text" name="" value="" placeholder="Author's Name..."><br>
+    <input id="create-comment-button" type="submit" name="" value="Create Comment">
+  </form>
 </body>
 </html>
