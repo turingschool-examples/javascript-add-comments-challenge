@@ -1,9 +1,12 @@
 $(document).ready(function(){
   $("#new_comment_button").on("click", function () {
-    alert("button was clicked!");
+    // alert("button was clicked!");
     $("#comments").append('<form id="new_comment">' + '<textarea></textarea>' + '<input type="text" id="authorName">' + '<input type="submit" value="Submit Comment">' + '</form>');
-    alert("we got here without an error...what's up?")
-  });
+    $("#new_comment").css("display", "block");
+  }
+  // alert("we got here without an error...what's up?");
+
+);
 });
 
 
