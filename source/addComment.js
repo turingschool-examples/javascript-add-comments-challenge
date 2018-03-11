@@ -1,5 +1,8 @@
 $(document).ready(function(){
-  // add your code here
+  <form id="new_comment"><textarea></textarea>
+  <input type="text" id="authorName" value="Your Name">
+  <input type="submit" value="Submit Comment">
+  </form>
 })
 
 
