@@ -1,9 +1,10 @@
 $(document).ready(function(){
-  <form id="new_comment"><textarea></textarea>
-  <input type="text" id="authorName" value="Your Name">
-  <input type="submit" value="Submit Comment">
-  </form>
-})
+  $("#new_comment_button").on("click", function () {
+    alert("button was clicked!");
+    $("#comments").append('<form id="new_comment">' + '<textarea></textarea>' + '<input type="text" id="authorName">' + '<input type="submit" value="Submit Comment">' + '</form>');
+    alert("we got here without an error...what's up?")
+  });
+});
 
 
 // Here is a sequence of events and requirements for this feature:
